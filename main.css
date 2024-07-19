@@ -42,20 +42,7 @@ font-size: 32px;
 .recipes:hover{
     transform: scale(1.02);
 }
-.recipe-details{
-    padding: 5px;
-    z-index: 1;
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    width: 40%;
-    height: 60%;
-    border-radius: 12px;
-    background-color: rgba(138, 221, 246, 0.921);
-    overflow-y: scroll;
-}
+
 .recipe_name{
     text-align: center;
     text-transform: uppercase;
@@ -68,25 +55,7 @@ font-size: 32px;
     white-space:pre-line;
     margin-bottom: 10px;
 }
-.recipe-close-btn{
-    border: none;
-    font-size: 18px;
-    padding: 8px;
-    border-radius: 4px;
-    background-color: red;
-    color: white;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.recipe-close-btn:hover{
-    background-color: rgb(117, 23, 23);
-}
+
 html, body {
     height: 100%;
     margin: 0;
@@ -133,4 +102,41 @@ footer {
     display: flex;
    
     justify-content: center;
+}
+.recipe-details {
+    padding: 20px; /* Add padding to make space for the close button */
+    z-index: 1;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    height: 60%;
+    border-radius: 12px;
+    background-color: rgba(138, 221, 246, 0.921);
+    overflow-y: scroll;
+    box-sizing: border-box; /* Ensure padding is included in the element's width and height */
+}
+
+.recipe-close-btn {
+    border: none;
+    font-size: 18px;
+    padding: 8px;
+    border-radius: 4px;
+    background-color: red;
+    color: white;
+    position: absolute;
+    top: 5px; /* Adjust to position it outside the box */
+    right: 5px; /* Adjust to position it outside the box */
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2; /* Ensure the button is above other content */
+}
+
+.recipe-close-btn:hover {
+    background-color: rgb(117, 23, 23);
 }
