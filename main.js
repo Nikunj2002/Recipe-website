@@ -18,7 +18,7 @@ const getrecipes = async (name) => {
 
         console.log(item);
         const colDiv = document.createElement('div');
-        colDiv.classList.add('col');
+        colDiv.classList.add('col','cd');
 
         const cardDiv = document.createElement('div');
         cardDiv.classList.add('card', 'h-100', 'recipes');
